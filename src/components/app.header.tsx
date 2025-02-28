@@ -12,7 +12,7 @@ function AppHeader() {
       <Container>
         <Navbar.Brand href="#home" className="bold">
           <Image
-            src="https://github.com/TMThaor/bitcoin-chart/blob/master/public/btc.png"
+            src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png"
             width="30"
             height="30"
             className="d-inline-block align-top"
