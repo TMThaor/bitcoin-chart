@@ -20,6 +20,8 @@ export default function Home() {
 
   const { theme } = useTheme(); // Nhận theme từ Context
   const data = GetCandles(selectedButton, "BTCUSDT", 500);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <Container className="main">
       <AppHeader></AppHeader>
@@ -33,7 +35,13 @@ export default function Home() {
         <Container>
           <Row>
             <Col md={5} xs={12} className="">
-              <SideBar></SideBar>
+              <div>
+                <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+                  Xem giá hiện tại
+                </button>
+
+                {isSidebarOpen && <SideBar />}
+              </div>
             </Col>
             <Col md={7} xs={12} className="">
               <DisplayChart data={data} theme={theme} />
