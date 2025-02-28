@@ -27,7 +27,7 @@ export const GetCandles = (
   limit: number
 ) => {
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
-  const { data, error, isLoading } = useSWR(
+  const { data, isLoading } = useSWR(
     `https://api.binance.com/api/v3/klines?symbol=${currentCoin}&interval=${currentTimeFrame}&limit=${limit}`,
     fetcher
   );

@@ -78,7 +78,7 @@ function DisplayChart(props: CandleStickChartProps) {
     return () => {
       chart.remove();
     };
-  }, [props.data]);
+  }, [props.data, props.theme]);
 
   return (
     <div

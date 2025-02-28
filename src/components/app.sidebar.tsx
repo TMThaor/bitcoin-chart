@@ -2,8 +2,8 @@ import { GetCandles, useLiveCandle } from "@/lib/Binance_API";
 import { useEffect, useState } from "react";
 
 const ChartComponent = () => {
-  const [timeFrame, setTimeFrame] = useState("1m");
-  const [coin, setCoin] = useState("BTCUSDT");
+  const [timeFrame] = useState("1m");
+  const [coin] = useState("BTCUSDT");
   const historicalData = GetCandles("1m", "BTCUSDT", 1);
   const previousData = historicalData[0];
 
